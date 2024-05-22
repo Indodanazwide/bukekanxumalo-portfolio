@@ -1,0 +1,132 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/*      Sections take the whole screen view     */
+section {
+    height: 100vh;
+}
+
+/*      HEADER      */
+header {
+    /*background: linear-gradient(to bottom, #ffffff, black);*/
+    background-color: #FFFFFF;
+}
+
+/*      Navigation      */
+nav {
+    background-color: #FFFFFF;
+    display: flex;
+    height: 45px;
+}
+
+.nav-logo {
+    margin-right: 30%;
+    margin-left: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.nav-links li:hover {
+    background-color: #E0E4EE;
+    transition: 0.8s;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+/*  Hero    */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.hero-title {
+    margin: 100px;
+}
+
+.hero-img {
+    margin: 70px;
+}
+
+.portfolio-title { 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio-title li {
+    display: inline;
+}
+
+.hero-social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.hero-social-links li {
+    margin-right: 10px;
+}
+  
+.social-icon {
+    width: 25px;
+}
+
+.bukeka-img {
+    width: 300px;
+    height: auto;
+    border-radius: 50px;
+}
+
+/*      MAIN        */
+main {
+    height: auto;
+}
+/*  About    */
+.about {
+    /*background: linear-gradient(to bottom, #FFFFFF, black);*/
+    height: auto;
+}
+
+.profile-photo {
+    width: 100px;
+    height: auto;
+}
+/*  Contact    */
+.contact {
+    background-color: #A5A5A5;
+}
+/*  Portfolio    */
+.portfolio {
+    background-color: #A5A5A5;
+}
+/*  Resume    */
+.resume {
+    background-color: #A5A5A5;
+}
+
+
+/*      FOOTER      */
+footer {
+    background-color: #CCCCCF;
+}
