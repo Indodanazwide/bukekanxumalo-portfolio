@@ -10,7 +10,7 @@
     <!--    Header      -->
     <header>
         <!-- Navigation -->
-        <nav>
+        <nav id="nav">
             <!-- Logo -->
             <div class="nav-logo">
                 <img src="images/logo.png" alt="Bukeka Nxumalo Logo" class="logo">
@@ -26,7 +26,7 @@
             <!-- Links -->
             <div class="nav-links">
                 <ul>
-                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#nav">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -37,7 +37,7 @@
         <!-- Hero Section -->
         <section id="hero">
             <!-- Hero Title -->
-            <div>
+            <div class="hero-title">
                 <h1>Bukeka Nxumalo</h1>
                 <p>Software Developer</p>
             
@@ -54,71 +54,167 @@
 
     <!--    Main        -->
     <main>
-        <!--    About Me (Contains my personal bio, resume, and a brief introduction.)   -->
-        <section id="about">
-            <div>
-                <h2>About Me</h2>
-                <p>Hi, I'm Bukeka Nxumalo, a passionate software developer based in South Africa. I specialize in front-end and back-end development, with expertise in HTML, CSS, JavaScript, React, and Node.js. I love creating innovative solutions to solve real-world problems.</p>
-                <p>Check out my resume <a href="resume.pdf" target="_blank">here</a>.</p>
+        <!-- About Me Section -->
+        <section class="about-me" id="about">
+            <div class="bio" id="bio-box">
+                <div class="text-container">
+                    <div class="text">
+                        <h2>About Me</h2>
+                        <p>Hi, I'm Bukeka Nxumalo, a second-year Bachelor of Information and Communication Technology student at Durban University of Technology from South Africa. I specialize in front-end development and have a keen interest in creating intuitive and engaging user experiences.</p>
+                        <p>With a solid foundation in HTML, CSS, and JavaScript, I am currently expanding my skills in modern frameworks like React. My passion for problem-solving and algorithmic games drives me to continuously improve my coding abilities.</p>
+                        <p>When I'm not coding, you can find me exploring new technologies, participating in coding challenges, or playing strategy games. My goal is to become a proficient software developer, with a strong focus on both front-end and back-end development.</p>
+                        <p>I am excited to showcase my projects and skills here. Feel free to browse through my portfolio and get in touch if you'd like to collaborate or learn more about my work.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="resume">
+                <h2>Resume</h2>
+                <div class="resume-section">
+                    <h3>Education</h3>
+                    <p><strong>Bachelor of Information and Communication Technology</strong>, Durban University of Technology, Expected to graduate in 2026</p>
+                </div>
+                <div class="resume-section">
+                    <h3>Experience</h3>
+                    <p><strong>Front-End Developer Intern</strong>, [Company Name], June 2023 - August 2023</p>
+                    <ul class="resume-list">
+                        <li>Developed responsive web pages using HTML, CSS, and JavaScript</li>
+                        <li>Collaborated with the design team to implement user-friendly interfaces</li>
+                        <li>Participated in code reviews and team meetings</li>
+                    </ul>
+                </div>
+                <div class="resume-section">
+                    <h3>Skills</h3>
+                    <p>HTML, CSS, JavaScript, React, Git, Responsive Design</p>
+                </div>
+                <div class="resume-section">
+                    <h3>Projects</h3>
+                    <p><strong>[Project Title]</strong> - Brief description of the project and technologies used.</p>
+                </div>
+                <div class="resume-section">
+                    <h3>Certifications and Awards</h3>
+                    <p>[Certification Name], [Award Name]</p>
+                </div>
             </div>
         </section>
-
-        <!--    Portfolio   -->
-        <section id="portfolio">
-            <!--    Projects ( Detailed descriptions of my projects, including links to live demos and GitHub repositories.)-->
+        <!-- Portfolio Section -->
+        <section class="portfolio" id="portfolio">
             <div class="projects">
                 <h2>Projects</h2>
                 <div class="project">
-                    <h3>Project Name</h3>
-                    <p>Description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla magna sit amet nisi ultricies, id condimentum felis condimentum.</p>
-                    <a href="#" class="demo-link">Demo</a>
-                    <a href="#" class="github-link">GitHub</a>
+                    <img src="path/to/screenshot1.jpg" alt="Project Screenshot">
+                    <div class="project-details">
+                        <h3>Project Title</h3>
+                        <p><strong>Purpose:</strong> Brief description of the project purpose.</p>
+                        <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, React, Node.js</p>
+                        <p><strong>Contributions:</strong> Detailed explanation of your role and contributions to the project.</p>
+                        <a href="https://github.com/yourusername/project-repo" target="_blank">GitHub Repo</a>
+                        <a href="https://yourprojectlive.com" target="_blank">Live Demo</a>
+                    </div>
                 </div>
                 <!-- Add more projects as needed -->
             </div>
-
-            <!--    Skills (A list of technologies and tools I am proficient in.)-->
             <div class="skills">
                 <h2>Skills</h2>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>React.js</li>
-                    <li>Node.js</li>
-                    <!-- Add more skills as needed -->
-                </ul>
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li><span class="skill-name">JavaScript</span><span class="skill-level">Advanced</span></li>
+                        <li><span class="skill-name">Python</span><span class="skill-level">Intermediate</span></li>
+                        <li><span class="skill-name">HTML & CSS</span><span class="skill-level">Advanced</span></li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <ul>
+                        <li><span class="skill-name">React</span><span class="skill-level">Advanced</span></li>
+                        <li><span class="skill-name">Node.js</span><span class="skill-level">Intermediate</span></li>
+                        <li><span class="skill-name">Express</span><span class="skill-level">Intermediate</span></li>
+                    </ul>
+                </div>
             </div>
         </section>
-        
-        <!--    Contact     -->
-        <section id="contact">
-            <div>
-                <h2>Contact Me</h2>
-                <p>Feel free to reach out to me for any inquiries or collaboration opportunities.</p>
-                <p>Email: bukeka@example.com</p>
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="contact-box">
+              <h2>Contact</h2>
+              <h3>I Value Your Feedback!</h3>
+              <p>Thank you for visiting my portfolio! Your insights and opinions are incredibly important to me.</p>
+              <p>Whether you have suggestions, questions, or simply want to share your thoughts, I would love to hear from you.</p>
+              <p>Please use the form below to send your feedback and help me improve. Your input makes a difference!</p>
+              <form id="contactForm">
+                <div class="contact-form-box">
+                  <input type="text" id="name" name="name" required>
+                  <label for="name">Name</label>
+                </div>
+                <div class="contact-form-box">
+                  <input type="email" id="email" name="email" required>
+                  <label for="email">Email</label>
+                </div>
+                <div class="contact-form-box">
+                  <input type="text" id="subject" name="subject" required>
+                  <label for="subject">Subject</label>
+                </div>
+                <div class="contact-form-box">
+                  <textarea id="message" name="message" required></textarea>
+                  <label for="message">Message</label>
+                </div>
+                <a href="#" onclick="document.getElementById('contactForm').submit(); return false;">Submit</a>
+              </form>
             </div>
-            <div>
-                <h3>Send Me a Message</h3>
-                <form action="#" method="POST">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-        </section>
+          </section>
+          
         
     </main>
-
-    <!--    Footer      -->
     <footer>
-        <p>&copy; 2024 Bukeka Nxumalo</p>
-    </footer>
+        <div class="footer-container">
+          <div class="contact-info">
+            <h3>Contact</h3>
+            <p>Phone: +27 68 592 5710</p>
+            <p>Email: <a href="mailto:nxumalobukeka66@gmail.com">nxumalobukeka66@gmail.com</a></p>
+            <br>
+            <p>Check out my portfolio and contact me for collaborations.</p>
+            <p><a href="path/to/your/resume.pdf" download="Bukeka_Nxumalo_Resume.pdf">Click here to download</a></p>
+          </div>
 
+          <div class="about-info">
+            <h3>About</h3>
+            
+            <p>I'm Bukeka Nxumalo, a second-year ICT student specializing in front-end development with skills in HTML, CSS, JavaScript, and React.</p>
+            <p>I aim to become a proficient software developer. Outside of coding, I explore new technologies, participate in coding challenges, and play strategy games.</p>
+          </div>
+
+          <div class="address">
+            <strong>Address:</strong> 
+            <p>Durban, South Africa</p>
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.005579409844!2d30.980654315049294!3d-29.85868028194943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7aaae2e2b2f45%3A0x9e6e2b8e124c72b1!2sDurban%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1595361234567!5m2!1sen!2sus"
+                    width="100%"
+                    height="200"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2024 Bukeka Nxumalo</p>
+            </div>
+            
+            <div class="copyright-with-links">
+                <ul class="contact-social-links">
+                    <li><a href="https://www.instagram.com/indodanazwide"><img src="images/instagram.png" class="social-icon" alt="Instagram"></a></li>
+                    <li><a href="https://github.com/Indodanazwide"><img src="images/github.png" class="social-icon" alt="GitHub"></a></li>
+                    <li><a href="https://www.linkedin.com/in/bukekanxumalo"><img src="images/linkedin.png" class="social-icon" alt="LinkedIn"></a></li>
+                    <li><a href="https://twitter.com/indodanazwide"><img src="images/twitter-alt.png" class="social-icon" alt="Twitter"></a></li>
+                    <li><a href="mailto:nxumalobukeka66@gmail.com"><img src="images/email.png" class="social-icon" alt="Email"></a></li>
+                </ul>
+            </div>
+        </div>
+      </footer>
     <script src="script.js"></script>
 </body>
 </html>

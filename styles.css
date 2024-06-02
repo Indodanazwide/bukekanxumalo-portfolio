@@ -4,20 +4,33 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
-    padding: 5px;
 }
 
+main {
+    padding: 2%;
+    color: #333;
+}
+
+/*  HEADER  */
 header {
     display: grid;
     grid-template-rows: auto 1fr;
     height: 100vh;
+    background-image: url('images/zwide.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right 10px; /* Adjust as needed */
 }
 
 nav {
-    padding: 0 2%;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -84,7 +97,7 @@ nav {
 #hero {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     text-align: center;
     padding: 20px;
@@ -96,6 +109,10 @@ nav {
 
 #hero p {
     font-size: 1.5rem;
+}
+
+.hero-title {
+    margin-right: 60%;
 }
 
 .contact-social-links {
@@ -115,14 +132,382 @@ nav {
 }
 
 .contact-social-links img {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     transition: transform 0.3s ease;
 }
 
 .contact-social-links img:hover {
     transform: scale(1.2);
 }
+
+.nav-links.active {
+    display: flex;
+}
+
+h1, h2, h3 {
+    font-weight: bolder;
+    color: black;
+}
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+/* ABOUT ME SECTION */
+.about-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 100vh;
+}
+
+.bio {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.7s;
+    z-index: 1; /* Ensure the content is above the blur overlay */
+}
+
+#bio-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/myphoto.png');
+    background-size: cover;
+    filter: blur(5px); /* Initial blur effect */
+    transition: filter 0.3s;
+    z-index: -1; /* Place the image behind the content */
+}
+
+#bio-box:hover::before {
+    filter: blur(0); /* Remove blur on hover */
+}
+
+.bio:hover {
+    transform: translateY(-17px);
+}
+
+.text:hover {
+    transform: 1.5s;
+    filter: blur(10px);
+}
+
+.text{
+    text-align: center;
+}
+
+.text h2, .resume h2 {
+    margin-bottom: 10%;
+}
+.resume {
+    padding: 20px;
+}
+
+.resume-section {
+    margin-bottom: 20px;
+}
+
+.resume-list {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* PORTFOLIO SECTION */
+.portfolio {
+    padding: 20px;
+    height: 100vh;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project {
+    display: flex;
+    gap: 20px;
+}
+
+.project img {
+    max-width: 150px;
+}
+
+.project-details {
+    flex: 1;
+}
+
+.skills {
+    padding: 20px;
+}
+
+.skill-category {
+    margin-bottom: 20px;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-category li {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.skill-name {
+    font-weight: bold;
+}
+
+.skill-level {
+    font-style: italic;
+}
+
+.contact {
+    height: 100vh;
+}
+.contact-box {
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  .contact-box h2, .contact-box h3, .contact-box p {
+    margin: 0 0 15px;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .contact-box h2 {
+    margin-bottom: 30px;
+  }
+  
+  .contact-box h3 {
+    color: #03e9f4;
+  }
+  
+  .contact-box .contact-form-box {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .contact-box .contact-form-box input,
+  .contact-box .contact-form-box textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #0e0d0d;
+    outline: none;
+    background: transparent;
+  }
+  
+  .contact-box .contact-form-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .contact-box .contact-form-box input:focus ~ label,
+  .contact-box .contact-form-box input:valid ~ label,
+  .contact-box .contact-form-box textarea:focus ~ label,
+  .contact-box .contact-form-box textarea:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .contact-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    border: 1px solid #03e9f4;
+    border-radius: 55px;
+    background: rgba(0,0,0,0.5);
+  }
+  
+  .contact-box form a:hover {
+    background: #03e9f4;
+    color: #fff;
+  }
+  
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-box {
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      
+      .contact-box h2, .contact-box h3, .contact-box p {
+        padding: 0;
+        text-align: center;
+      }
+      
+      .contact-box h2 {
+        margin-bottom: 30px;
+      }
+      
+      .contact-box h3 {
+        color: #03e9f4;
+      }
+      
+      .contact-box .contact-form-box {
+        position: relative;
+        margin-bottom: 30px;
+      }
+      
+      .contact-box .contact-form-box input,
+      .contact-box .contact-form-box textarea {
+        width: 100%;
+        font-size: 16px;
+        border: none;
+        border-bottom: 1px solid #0e0d0d;
+        outline: none;
+        background: transparent;
+      }
+      
+      .contact-box .contact-form-box label {
+        padding: 10px 0;
+        font-size: 16px;
+        pointer-events: none;
+        transition: .5s;
+      }
+      
+      .contact-box .contact-form-box input:focus ~ label,
+      .contact-box .contact-form-box input:valid ~ label,
+      .contact-box .contact-form-box textarea:focus ~ label,
+      .contact-box .contact-form-box textarea:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: #03e9f4;
+        font-size: 12px;
+      }
+      
+      .contact-box form a {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #03e9f4;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 4px;
+        border: 1px solid #03e9f4;
+        border-radius: 55px;
+        background: rgba(0,0,0,0.5);
+      }
+      
+      .contact-box form a:hover {
+        background: #03e9f4;
+        color: #fff;
+      }
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    background-color: #28a745   ;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    display: grid;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #333333  ;
+    margin: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    padding: 1%;
+    justify-content: center;
+}
+
+.contact-info {
+    width: 40%;
+    padding: 1%;
+    color: #333;
+}
+
+.contact-info h3, .about-info h3, .address h3 {
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.about-info, .address {
+    width: 40%;
+    padding: 1%;
+    color: #333;
+    text-align: center;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.418);
+}
+
+.copyright-with-links p {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Responsive Styles */
+@media (max-width: 1000px) {
+    .about-me {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-container {
+        display: grid;
+    }
+
+    .contact-info, .about-info, .address {
+        width: 100%;
+        padding: 4%;
+        text-align: center;
+    }
+
+    .contact {
+        display: grid;
+        justify-content: center;
+        gap: 10%;
+    }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -155,8 +540,92 @@ nav {
     .hamburger {
         display: flex;
     }
+
+    header {
+        background-image: none;
+        background: linear-gradient(to bottom, white, #ffffff, black);
+    }
+
+    #hero {
+        background-image: url('images/zwide.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*background: linear-gradient(to bottom, #ffffff, #E6C8AD);*/
+    }
+
+    .hero-title {
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    /* ABOUT ME SECTION */
+    .about-me {
+        display: grid;
+        gap: 0;
+        height: auto;
+        background: linear-gradient(to bottom, white, #CFB595, white);
+    }
+    .bio {
+        padding: 40px;
+        transition: transform 0.7s;
+        z-index: 1; /* Ensure the content is above the blur overlay */
+    }
+
+    #bio-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('images/myphoto.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        filter: blur(10px); /* Initial blur effect */
+        transition: filter 0.3s;
+        z-index: -1; /* Place the image behind the content */
+    }
+    
+    #bio-box:hover::before {
+        filter: blur(0); /* Remove blur on hover */
+    }
+    
+    .bio:hover {
+        transform: translate3d(70px);
+    }
+
+    .text-container {
+        padding: 25px;
+        border: 2px solid #0e0d0d;
+        border-radius: 20px;
+    }
+
+    .resume {
+        border: 2px solid black;
+        height: 100vh;
+    }
 }
 
 .nav-links.active {
     display: flex;
+}
+
+h1, h2, h3 {
+    font-weight: bolder;
+    color: black;
+}
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+    font-weight: bold;
 }
